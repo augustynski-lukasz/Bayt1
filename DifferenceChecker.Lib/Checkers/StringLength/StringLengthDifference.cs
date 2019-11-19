@@ -1,6 +1,6 @@
 ﻿namespace DifferenceChecker.Lib
 {
-    public class StringLengthDifferenceChecker : IDifferenceChecker<string>
+    public class StringLengthDifference : IDifferenceChecker<string>
     {
         public IDifferenceInfo Check(string one, string two)
         {
@@ -15,7 +15,7 @@
 
         public string GetName()
         {
-            return typeof(StringLengthDifferenceChecker).Name;
+            return typeof(StringLengthDifference).Name;
         }
     }
 }

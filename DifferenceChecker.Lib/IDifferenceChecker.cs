@@ -7,6 +7,6 @@
 
     public interface IDifferenceChecker<T>  : IDifferenceChecker where T: class
     {
-        IDifferenceInfo Check(T one, T two);
+        IDifferenceInfo Check(T first, T second);
     }
 }

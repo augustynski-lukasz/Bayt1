@@ -26,7 +26,7 @@ namespace DiffetenceChecker.Lib.Tests
         [Test, TestCaseSource("LengthDifferenceSource")]
         public void Should_Report_Length_Difference(string first, string second)
         {
-            var lengthDifferenceChecker = new StringLengthDifferenceChecker();
+            var lengthDifferenceChecker = new StringLengthDifference();
             _differenceCheckBuilder
                 .AddDifferenceCheck(lengthDifferenceChecker)
                 .Check(first, second);
@@ -51,7 +51,7 @@ namespace DiffetenceChecker.Lib.Tests
         [Test, TestCaseSource("LengthEqualitySource")]
         public void Should_Report_Length_Equality(string first, string second)
         {
-            var lengthDifferenceChecker = new StringLengthDifferenceChecker();
+            var lengthDifferenceChecker = new StringLengthDifference();
             _differenceCheckBuilder
                 .AddDifferenceCheck(lengthDifferenceChecker)
                 .Check(first, second);
