@@ -1,7 +1,5 @@
-using DifferenceChecker.Lib;
 using FluentAssertions;
 using NUnit.Framework;
-using NUnit.Framework.Internal;
 using System.Linq;
 using DifferenceChecker.Lib.StringLength;
 using DifferenceChecker.Lib.StringLength.Info;
@@ -18,14 +16,14 @@ namespace DifferenceChecker.Lib.Tests
             _differenceCheckBuilder = new StringDifferenceCheckBuilder();
         }
 
-        private static object[] LengthDifferenceSource = new object[]
+        private static readonly object[] LengthDifferenceSource = new object[]
         {
             new object[] { "Aasdadsad", "dsadadsadadsa" },
             new object[] { "Aasd ads ad", "dsad adsada dsa" },
             new object[] { "Aasda dsa d", "ds adad sad adsa" }
         };
 
-        [Test, TestCaseSource("LengthDifferenceSource")]
+        [Test, TestCaseSource(nameof(LengthDifferenceSource))]
         public void Should_Report_Length_Difference(string first, string second)
         {
             var lengthDifferenceChecker = new StringLengthDifference();
@@ -43,14 +41,14 @@ namespace DifferenceChecker.Lib.Tests
                 .Should().Be(second);
         }
 
-        private static object[] LengthEqualitySource = new object[]
+        private static readonly object[] LengthEqualitySource = new object[]
         {
             new object[] { "Aasdadsad", "dsadadsad" },
             new object[] { "Aa ads ad", "dsad adsa" },
             new object[] { "Asda dsa d", "ds adad sa" }
         };
 
-        [Test, TestCaseSource("LengthEqualitySource")]
+        [Test, TestCaseSource(nameof(LengthEqualitySource))]
         public void Should_Report_Length_Equality(string first, string second)
         {
             var lengthDifferenceChecker = new StringLengthDifference();

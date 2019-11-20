@@ -1,13 +1,12 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 
 namespace DifferenceChecker.Lib
 {
     public class StringDifferenceCheckBuilder : IDifferenceCheckBuilder<string>
     {
-        private List<IDifferenceChecker<string>> _differenceCheckers = new List<IDifferenceChecker<string>>();
-        private List<IDifferenceInfo> _differenceInfos = new List<IDifferenceInfo>();
+        private readonly List<IDifferenceChecker<string>> _differenceCheckers = new List<IDifferenceChecker<string>>();
+        private readonly List<IDifferenceInfo> _differenceInfos = new List<IDifferenceInfo>();
         private IDifferenceInfoPrinterFactory _printerFactory;
         private string _first;
         private string _second;

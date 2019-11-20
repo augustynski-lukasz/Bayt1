@@ -1,5 +1,6 @@
 ﻿using System;
 using DifferenceChecker.Lib;
+using DifferenceChecker.Lib.Common;
 using DifferenceChecker.Lib.LetterCase;
 using DifferenceChecker.Lib.StringLength;
 

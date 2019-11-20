@@ -1,4 +1,5 @@
-﻿using DifferenceChecker.Lib.StringLength.Info;
+﻿using DifferenceChecker.Lib.Common;
+using DifferenceChecker.Lib.StringLength.Info;
 
 namespace DifferenceChecker.Lib.StringLength.Printers
 {

@@ -1,4 +1,6 @@
-﻿namespace DifferenceChecker.Lib.NoDifference.Printers
+﻿using DifferenceChecker.Lib.Common;
+
+namespace DifferenceChecker.Lib.NoDifference.Printers
 {
     public class ConsolePrinter : BaseDifferenceInfoPrinter<NoDifference>
     {

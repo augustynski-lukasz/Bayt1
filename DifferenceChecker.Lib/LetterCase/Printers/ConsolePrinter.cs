@@ -1,4 +1,4 @@
-﻿using System.Linq;
+﻿using DifferenceChecker.Lib.Common;
 using DifferenceChecker.Lib.LetterCase.Info;
 
 namespace DifferenceChecker.Lib.LetterCase.Printers

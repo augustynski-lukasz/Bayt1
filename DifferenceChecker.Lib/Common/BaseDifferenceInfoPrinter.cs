@@ -1,4 +1,4 @@
-﻿namespace DifferenceChecker.Lib
+﻿namespace DifferenceChecker.Lib.Common
 {
     public abstract class BaseDifferenceInfoPrinter<T> : IDifferenceInfoPrinter
         where T:IDifferenceInfo

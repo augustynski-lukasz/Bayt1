@@ -20,7 +20,7 @@ namespace DifferenceChecker.Lib.LetterCase
             }
 
             return differenceInfo.Positions.Any()
-                ? (IDifferenceInfo) differenceInfo
+                ? differenceInfo
                 : (IDifferenceInfo) new NoDifference.NoDifference(this);
         }
 

@@ -1,8 +1,5 @@
-using System;
-using DifferenceChecker.Lib;
 using FluentAssertions;
 using NUnit.Framework;
-using NUnit.Framework.Internal;
 using System.Linq;
 using DifferenceChecker.Lib.LetterCase;
 using DifferenceChecker.Lib.LetterCase.Info;
@@ -19,13 +16,13 @@ namespace DifferenceChecker.Lib.Tests
             _differenceCheckBuilder = new StringDifferenceCheckBuilder();
         }
 
-        private static object[] LetterCaseDifferenceSource = new object[]
+        private static readonly object[] LetterCaseDifferenceSource = new object[]
         {
             new object[] { "AaSdaDsad", "aasdadsad", ( Number:3, Positions: new []{0,2,5}) },
             new object[] { "asdadregngfsda", "asDAdreGngF", ( Number:4, Positions: new []{2,3,7,10}) }
         };
 
-        [Test, TestCaseSource("LetterCaseDifferenceSource")]
+        [Test, TestCaseSource(nameof(LetterCaseDifferenceSource))]
         public void Should_Report_LetterCase_Difference(string first, string second, (int Number, int[] Positions) results)
         {
             var differenceChecker = new LetterCaseDifference();
@@ -46,13 +43,13 @@ namespace DifferenceChecker.Lib.Tests
 
         }
 
-        private static object[] LetterCaseNoDifferenceSource = new object[]
+        private static readonly object[] LetterCaseNoDifferenceSource = new object[]
         {
             new object[] { "AaSdaDsad", "AaSdaDsad"},
             new object[] { "asdadregngfsda", "asdadregng" }
         };
 
-        [Test, TestCaseSource("LetterCaseNoDifferenceSource")]
+        [Test, TestCaseSource(nameof(LetterCaseNoDifferenceSource))]
         public void Should_Report_NoDifference(string first, string second)
         {
             var differenceChecker = new LetterCaseDifference();

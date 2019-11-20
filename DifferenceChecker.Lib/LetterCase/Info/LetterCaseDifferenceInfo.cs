@@ -10,7 +10,7 @@ namespace DifferenceChecker.Lib.LetterCase.Info
         {
             _differenceChecker = differenceChecker;
         }
-        public List<int> Positions { get; private set; } = new List<int>();
+        public List<int> Positions { get; } = new List<int>();
         internal void AddPosition(int i)
         {
             Positions.Add(i);

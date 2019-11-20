@@ -5,8 +5,8 @@ namespace DifferenceChecker.Lib.StringLength.Info
     public class StringLengthInfo : IDifferenceInfo
     {
         private readonly IDifferenceChecker _differenceChecker;
-        public string Longer { get; private set; }
-        public int Number { get; private set; }
+        public string Longer { get; }
+        public int Number { get; }
 
         public StringLengthInfo(IDifferenceChecker differenceChecker, 
             string longer,

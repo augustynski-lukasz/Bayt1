@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DifferenceChecker.Lib
+namespace DifferenceChecker.Lib.Common
 {
     public class NullConsolePrinter : IDifferenceInfoPrinter
     {
