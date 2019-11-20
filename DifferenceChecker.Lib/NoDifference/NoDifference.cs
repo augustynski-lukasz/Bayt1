@@ -1,4 +1,4 @@
-﻿namespace DifferenceChecker.Lib
+﻿namespace DifferenceChecker.Lib.NoDifference
 {
     public class NoDifference : IDifferenceInfo
     {
@@ -7,6 +7,11 @@
         public NoDifference(IDifferenceChecker differenceChecker)
         {
             _differenceChecker = differenceChecker;
+        }
+
+        public string GetDifferenceName()
+        {
+            return _differenceChecker.GetName();
         }
     }
 }

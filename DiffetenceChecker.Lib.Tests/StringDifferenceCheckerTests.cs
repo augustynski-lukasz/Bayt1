@@ -3,10 +3,12 @@ using FluentAssertions;
 using NUnit.Framework;
 using NUnit.Framework.Internal;
 using System.Linq;
+using DifferenceChecker.Lib.StringLength;
+using DifferenceChecker.Lib.StringLength.Info;
 
-namespace DiffetenceChecker.Lib.Tests
+namespace DifferenceChecker.Lib.Tests
 {
-    public class DifferenceCheckersTests
+    public class StringDifferenceCheckerTests
     {
         private IDifferenceCheckBuilder<string> _differenceCheckBuilder;
 
@@ -36,7 +38,7 @@ namespace DiffetenceChecker.Lib.Tests
             differences.Should().HaveCount(1);
             differences
                 .ElementAt(0)
-                .Should().BeOfType<StringLengthDifferenceInfo>()
+                .Should().BeOfType<StringLengthInfo>()
                 .Subject.Longer
                 .Should().Be(second);
         }
@@ -61,7 +63,7 @@ namespace DiffetenceChecker.Lib.Tests
             differences.Should().HaveCount(1);
             differences
                 .ElementAt(0)
-                .Should().BeOfType<NoDifference>();
+                .Should().BeOfType<NoDifference.NoDifference>();
         }
     }
 }
