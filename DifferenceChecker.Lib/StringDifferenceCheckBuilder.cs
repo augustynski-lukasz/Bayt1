@@ -42,9 +42,7 @@ namespace DifferenceChecker.Lib
         public string Print()
         {
             var sb = new StringBuilder();
-            sb.AppendLine("Checking differences between strings:");
-            sb.AppendLine($"    1: '{_first}'");
-            sb.AppendLine($"    2: '{_second}'");
+            sb.AppendLine(_printerFactory.GetIntroPrinter(_first, _second).PrintMessage());
 
             foreach (var differenceInfo in _differenceInfos)
             {
