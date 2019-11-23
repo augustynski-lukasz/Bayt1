@@ -7,7 +7,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DifferenceChecker.Lib", "Di
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DifferenceChecker.Lib.Tests", "DiffetenceChecker.Lib.Tests\DifferenceChecker.Lib.Tests.csproj", "{9C58830D-1929-46A4-A7E6-0763E22DF05C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DifferenceChecker", "DifferenceChecker\DifferenceChecker.csproj", "{DBC181F9-A81B-4E5F-B415-A6DC58082865}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DifferenceChecker", "DifferenceChecker\DifferenceChecker.csproj", "{DBC181F9-A81B-4E5F-B415-A6DC58082865}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution items", "Solution items", "{7966932B-A7D1-4B87-B09B-4D012331A21C}"
+	ProjectSection(SolutionItems) = preProject
+		Readme.md = Readme.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
